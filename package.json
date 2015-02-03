@@ -1,0 +1,17 @@
+{
+    "name": "pokeradioholding",
+    "version": "2014.1.0",
+    "author": "Jamie Ingram <jamie@pokelondon.com>",
+    "dependencies": {
+        "grunt": "0.4.1",
+        "grunt-contrib": "0.7.0",
+        "grunt-contrib-less": "0.5.2",
+        "grunt-requirejs": "~0.4.0",
+        "grunt-cli": "0.1.9",
+        "glob": "3.2.1"
+    },
+    "license": "Private",
+    "engines": {
+        "node": ">=0.10.12"
+    }
+}
