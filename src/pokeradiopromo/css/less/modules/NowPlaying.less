@@ -1,0 +1,85 @@
+.NowPlaying {
+  background-color: @lightGreen;
+  text-align: center;
+}
+
+.Screenshot-browser {
+  display:block;
+  padding-top:110px;
+
+  @media (max-width: @small) {
+    padding-top:50px;
+  }
+}
+
+.Screenshot-image {
+  vertical-align:bottom;
+  width:90%;
+}
+
+.NowPlaying-detail {
+  text-align: left;
+  padding-left:90px;
+  padding-right:30px;
+  padding-top:50px;
+  padding-bottom:70px;
+  background-color: @offWhite;
+
+  @media (max-width: @small) {
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:30px;
+    padding-bottom:50px;
+  }
+  
+  h3 {
+    color:@lightGrey;
+    .font-size-ems(25);
+  }
+
+  .track {
+    display:inline-block;
+    border-right:1px solid black;
+
+    @media (max-width: @small) {
+      border-right:none;
+    }
+  }
+
+  .track-detail {
+    padding-top:5px;
+    display:table;
+  }
+
+  .track-info {
+    display:table-cell;
+    vertical-align: middle;
+    padding-left:24px;
+    padding-right:50px;
+
+    @media (max-width: @small) {
+      padding-left:5px;
+      padding-right:5px;
+    }
+
+  }
+  .track-image {
+    display:inline-block;
+    margin-right:6px;
+  }
+
+  .track-title {
+    display:block;
+    .font-size-ems(17);
+    .line-height-ems(17);
+    font-family: @regularFontFamily;
+    color: @darkGrey;
+    font-weight:600;
+    padding-bottom:4px;
+  }
+
+  .track-artist {
+    display:block;
+    .font-size-ems(15);
+  }
+}

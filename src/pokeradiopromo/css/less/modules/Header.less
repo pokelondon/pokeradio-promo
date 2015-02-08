@@ -14,6 +14,26 @@
   background-repeat: no-repeat;
   padding-bottom:100px;
   padding-top:80px;
+
+  @media (max-width: @large) {
+    padding-top:50px;
+    padding-bottom:80px;
+  }
+
+  @media (max-width: @small) {
+    padding-top:10px;
+    padding-bottom:40px;
+  }
+}
+
+.devices-image {
+  position: relative;
+  top:100px;
+  width:100%;
+
+  @media (max-width: @small) {
+    top:50px;
+  }
 }
 
 .strapline {
@@ -22,9 +42,9 @@
   color:@white;
   .font-size-ems(25);
   font-weight: 200;
+
+  @media (max-width: @small) {
+    .font-size-ems(20);
+  }
 }
 
-.devices-image {
-  position: relative;
-  top:100px;
-}

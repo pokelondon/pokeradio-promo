@@ -1,0 +1,40 @@
+.Summary {
+  
+  background-color: @offWhite;
+  padding-top:150px;
+  text-align: center;
+  padding-left:10%;
+  padding-right:10%;
+
+  @media (max-width: @small) {
+    padding-top:50px;
+  }
+
+  h2 {
+    .font-size-ems(35);
+    .line-height-ems(18);
+    @media (max-width: @small) {
+      .font-size-ems(24);
+    }
+
+  }
+
+  p {
+    .font-size-ems(20);
+    .line-height-ems(18);
+
+    @media (max-width: @small) {
+      .font-size-ems(15);
+    }
+  }
+}
+
+.Summary-download-button {
+  display:block;
+  margin-top:30px;
+  padding-bottom:100px;
+
+  @media (max-width: @small) {
+    padding-bottom:50px;
+  }
+}

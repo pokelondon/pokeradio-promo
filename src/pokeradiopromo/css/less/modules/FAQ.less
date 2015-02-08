@@ -1,0 +1,48 @@
+.FAQ {
+  text-align:center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left:10%;
+  padding-right:10%;
+
+  @media (max-width: @small) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  h2 {
+    margin-bottom:60px;
+    .font-size-ems(35);
+  
+    @media (max-width: @small) {
+      .font-size-ems(32);
+      margin-bottom:40px;
+    }
+
+  }
+
+  .faq-item {
+    
+    text-align:left;
+
+    h3 {
+      .font-size-ems(17);
+      .line-height-ems(24);
+
+      @media (max-width: @small) {
+        .font-size-ems(15);
+        .line-height-ems(24);
+      }
+    }
+
+    p {
+      .font-size-ems(17);
+      .line-height-ems(24);
+
+      @media (max-width: @small) {
+        .font-size-ems(15);
+        .line-height-ems(24);
+      }
+    }
+  }
+}

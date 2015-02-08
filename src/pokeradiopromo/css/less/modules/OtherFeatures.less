@@ -1,0 +1,88 @@
+.OtherFeatures {
+  
+  text-align: center;
+  display:block;
+  padding-bottom:60px;
+
+  @media (max-width: @small) {
+    padding-bottom:50px;
+  }
+
+  h2 {
+    margin-bottom:70px;
+    @media (max-width: @small) {
+      margin-bottom:30px;
+    }
+  }
+
+  .feature-detail {
+    
+    vertical-align:top;
+    display:inline-block;
+    background-position:top center;
+    background-repeat: no-repeat;
+    margin-bottom:40px;
+
+    h4 {
+      padding-top:140px;
+      .line-height-ems(24);
+      .font-size-ems(15);
+      padding-left:15px;
+      padding-right:15px;
+
+      @media (max-width: @small) {
+        padding-top:80px;
+        .line-height-ems(20);
+        .font-size-ems(14);
+        margin-bottom:0px;
+      }
+
+      @media (max-width: @large) {
+        padding-left:10px;
+        padding-right:10px;
+      }
+    }
+
+    p {
+      .font-size-ems(12);
+      .line-height-ems(24);
+    }
+
+    max-width:33%;
+    margin-left:15px;
+    margin-right:15px;
+
+    @media (max-width: @small) {
+      max-width:80%;
+      margin-bottom:20px;
+    }
+
+    @media (max-width: @large) {
+      margin-left:10px;
+      margin-right:10px;
+    }
+  }
+  .feature-domain {
+    background-image: url('../img/lock.png');
+    background-size: 84px 119px;
+    @media (max-width: @small) {
+      background-size: (84px * 0.7) (119px * 0.7);
+    }
+  }
+
+  .feature-playlist {
+    background-image: url('../img/list.png');
+    background-size: 92px 119px;
+    @media (max-width: @small) {
+      background-size: (92px * 0.7) (119px * 0.7);
+    }
+  }
+
+  .feature-integration {
+    background-image: url('../img/cogs.png');
+    background-size: 108px 119px;
+    @media (max-width: @large) {
+      background-size: (108px * 0.7) (119px * 0.7);
+    }
+  }
+}

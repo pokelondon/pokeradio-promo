@@ -11,11 +11,11 @@ define(['jquery', 'jquery.debounce'],
             var currentWidth = self.getWidth();
             if ((self.previousWidth < self.minDesktopWidth) && (currentWidth >= self.minDesktopWidth)) {
                 // mobile -> desktop transition
-                $(window).trigger('got:mobileToDesktop');
+                $(window).trigger('mobileToDesktop');
             }
             else if ((self.previousWidth >= self.minDesktopWidth) && (currentWidth < self.minDesktopWidth)) {
                 // desktop -> mobile transition
-                $(window).trigger('got:desktopToMobile');
+                $(window).trigger('desktopToMobile');
             }
             self.previousWidth = currentWidth;
         //}));

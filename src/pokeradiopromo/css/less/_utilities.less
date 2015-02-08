@@ -1,7 +1,7 @@
 .u-Button {
+  font-family: @mediumFontFamily;
   .font-size-ems(12);
   .line-height-ems(12);
-  line-height:12px;
   color: @white;
   display:inline-block;
   .border-radius(16px);
@@ -16,4 +16,94 @@
 
 .u-Button-blue:hover {
   background: #0ec2e3;
+}
+
+.u-Button-large {
+  font-family: @regularFontFamily;
+  .font-size-ems(20);
+  .line-height-ems(20);
+  color: @white;
+  display:inline-block;
+  .border-radius(28px);
+  padding:15px;
+  padding-left:25px;
+  padding-right:25px;
+}
+
+.u-Text-link {
+  color: @lightGrey;
+  .underline(@lightGrey, 1px, -2px);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: @darkGrey;
+}
+
+.forty-percent {
+  display:inline-block;
+  width:40%;
+}
+
+.sixty-percent {
+  display:inline-block;
+  width:60%;
+
+
+}
+
+.centre-vertical {
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.align-right {
+  text-align:right;
+}
+
+.footnote {
+  .font-size-ems(12);
+}
+
+.circle-holder {
+  display:inline-block;
+}
+.grey-circle {
+  display:table;
+  font-family:@mediumFontFamily;
+  width:64px;
+  height:64px;
+  background-color:#666;
+  color:@white;
+  .border-radius(32px);
+  .font-size-ems(28);
+  .line-height-ems(28);
+}
+
+.circle-text {
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.desktop-padding-left-20 {
+  @media (min-width: @small) {
+    padding-left:20px;
+  }
+}
+
+.desktop-padding-right-20 {
+  @media (min-width: @small) {
+    padding-right:20px;
+  }
+}
+
+.desktop-only {
+  @media (max-width: @small) {
+    display:none;
+  }
+}
+
+.mobile-only {
+  @media (min-width: @postSmall) {
+    display:none;
+  }
 }

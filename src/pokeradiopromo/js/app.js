@@ -10,17 +10,12 @@ require.config({
         "jquery.debounce": "libs/jquery.ba-throttle-debounce.min",
         underscore: "libs/underscore.min",
         text: "libs/require.text",
+        vivus: "libs/vivus.min"
     },
 
     shim: {
         underscore: {
             exports: "_"
-        },
-        backbone: {
-            deps: ["underscore", "jquery"]
-        },
-        owl: {
-            deps: ["jquery"]
         },
         "jquery.migrate": {
             deps: ["jquery"]
@@ -30,9 +25,9 @@ require.config({
 
 require(["jquery",
     "app/LayoutHandler",
-    "jquery.migrate"],
+    "vivus"],
 
-    function($, LayoutHandler) {
+    function($, LayoutHandler, Vivus) {
 
         // trim shim
         (function() {
@@ -45,9 +40,35 @@ require(["jquery",
 
         (function() {
             $(document).ready(function() {
+                var nav_toggle = $('.Nav-burger-menu');
+                var nav = $('.Nav');
+                nav_toggle.on('click', function (e) {
+                    e.preventDefault();
+                    nav.toggleClass('is-open');
+                });
+
+                $('.menu-link').on('click', function (e) {
+                    e.preventDefault();
+                    var target = $(this.hash);
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        nav.removeClass('is-open');
+                        return false;
+                    }
+                });
+
+                $(window).on("mobileToDesktop", function() {
+                    nav.removeClass('is-open');
+                });
+
+                var Vivus = window.Vivus;
+                var diagram = new Vivus('HowItWorks-diagram', {type: 'scenario', duration: 200});
 
             });
-        });
+
+        })();
         
     }
 );

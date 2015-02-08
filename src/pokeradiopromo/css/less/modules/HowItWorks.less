@@ -1,0 +1,34 @@
+.HowItWorks {
+  background-color: @offWhite;
+  text-align:center;
+  padding-top: 100px;
+  padding-bottom:100px;
+  padding-left:10%;
+  padding-right:10%;
+
+  @media (max-width: @small) {
+    padding-top: 50px;
+    padding-bottom:50px;
+  }
+  
+  h2 {
+    .font-size-ems(35);
+    margin-bottom:40px;
+
+    @media (max-width: @small) {
+      .font-size-ems(32);
+    }
+  }
+
+  p {
+    font-weight:400;
+    color:@lightGrey;
+    .font-size-ems(20);
+    .line-height-ems(24);
+
+    @media (max-width: @small) {
+      .font-size-ems(18);
+      .line-height-ems(22);
+    }
+  }
+}

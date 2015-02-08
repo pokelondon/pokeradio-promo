@@ -452,3 +452,51 @@
 .line-height-ems(@pxSize) {
     line-height: 1em * (@pxSize / @baseFontSize);
 }
+
+.rising-underline(@color, @thickness, @distance: 3px) {
+    
+    position: relative;
+    text-decoration: none;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -@distance;
+        left: 0;
+        width: 100%;
+        height: @thickness;
+        background-color: @color;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .2s ease-out;
+    }
+ 
+    &:hover:after {
+        bottom: 0;
+        opacity: 1;
+        transition: all .15s ease-out;
+    }
+}
+
+.underline(@color, @thickness, @distance: 3px) {
+    position: relative;
+    text-decoration: none;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -@distance;
+        left: 0;
+        width: 100%;
+        height: @thickness;
+        background-color: @color;
+        pointer-events: none;
+    }
+}
+
+.vertical-align() {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
