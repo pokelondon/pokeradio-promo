@@ -736,6 +736,11 @@ a:focus {
   background-color: #19d0f1;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .Header {
+    margin-top: 50px;
+  }
+}
 .Logo-radio {
   margin: 0 auto;
   width: 153px;
@@ -861,10 +866,12 @@ a:focus {
 .NowPlaying-detail .track {
   display: inline-block;
   border-right: 1px solid black;
+  min-width: 400px;
 }
 @media (max-width: 480px) {
   .NowPlaying-detail .track {
     border-right: none;
+    min-width: 100px;
   }
 }
 .NowPlaying-detail .track-detail {
@@ -886,6 +893,8 @@ a:focus {
 .NowPlaying-detail .track-image {
   display: inline-block;
   margin-right: 6px;
+  width: 72px;
+  height: 72px;
 }
 .NowPlaying-detail .track-title {
   display: block;
