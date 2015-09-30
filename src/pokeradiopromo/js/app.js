@@ -73,7 +73,7 @@ require(["jquery",
             var image_url = 'img/track.jpg';
 
             $.getJSON(
-                'http://pokerad.io/api/playlist/'
+                'http://pokerad.io/api/v2/playlist/'
             )
             .done(function(json) {
                 var track = json[0];
@@ -124,6 +124,6 @@ require(["jquery",
                 artist_el.text(artist);
             }
         })();
-        
+
     }
 );
